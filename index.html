@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Apple Shop</title>
+</head>
+<body>
+    <section id="header">
+        <div class="logoIPH">
+            <img src="poze/apple-logo.png" alt="logo apple" height="130px" width="200px">
+        </div>
+        <div class="title">
+            <h1>Apple Shop: accesorii și telefoane</h1>
+        </div>
+        <div>
+    <ul id="navigBar">
+            <li><a class="activ" href="index.html"><ion-icon name="home-outline"></ion-icon>Home</a></li>
+            <li><a href="contact.html"><ion-icon name="call-outline"></ion-icon>Contact</a></li>
+            <li><a href="despre.html"><ion-icon name="information-circle-outline"></ion-icon>Despre</a></li>
+            <li><a href="recenzii.html"><ion-icon name="star-half-outline"></ion-icon>Recenzii</a></li>
+            <li><a href="cart.html"><ion-icon name="cart-outline"></ion-icon>Coș</a></li>
+    </ul>
+        </div>
+    </section>
+
+    <section id="product">
+        <table>
+            <tr>
+                <td>
+                    <div class="container">
+                        <h1>Produsele Noastre</h1>
+                        <div class="row">
+                            <div class="column">
+                                <img src="poze/iph14.jpg" alt="Iphone 14" height="250px" width="250px">
+                            </div>
+                            <div class="column">
+                                <img src="poze/incarcator.jpg" alt="Încărcător Iphone 14" height="250px" width="250px">
+                            </div>
+                            <div class="column">
+                                <img src="poze/airpods.jpeg" alt="Airpods 13" height="250px" width="250px">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <p class="x">Iphone 14</p>
+                            </div>
+                            <div class="column">
+                                <p class="x">Încărcător Iphone 14</p>
+                            </div>
+                            <div class="column">
+                                <p class="x">Airpods 13</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column"><p class="pret">4500 RON</p></div>
+                            <div class="column"><p class="pret">75 RON</p></div>
+                            <div class="column"><p class="pret">250 RON</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="btn">    
+                                <button class="buton" onclick="addtocart(4500), deleteEsteGol(), show(1)">Adaugă în coș</button>
+                            </div>
+                            <div class="btn">    
+                                <button class="buton" onclick="addtocart(75), deleteEsteGol(), show(2)">Adaugă în coș</button>
+                            </div>
+                            <div class="btn">    
+                                <button class="buton" onclick="addtocart(250), deleteEsteGol(), show(3)">Adaugă în coș</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="cosD">
+                    <div class="cos">
+                        <h3 class="cos-title">Coșul dumneavoastră</h3>
+                        <p id="gol">este gol. Comanda minimă: 100 RON <span id="total"></p>                      
+                            <p id="comandaMin"><span id="ValTotala"> 0</span> RON</span></p>
+                            
+                            <div class="produs">
+                                <p id="produs1" style="display: none;">Iphone 14  <button onclick="downQty(1,4500)">-</button>
+                                <span id="qty1">1</span>
+                                <button onclick="upQty(1,4500)">+</button>
+                                <span style="display: none;" id="pretInitial1">4500</span>
+                                <span id="total1">4500</span> RON <button id="deleteRow" style="background-color: rgb(142, 218, 253) ;" onclick="deleteRow(1)"> X </button>
+                                </p>
+                            </div>
+        
+                            <div class="produs">
+                                <p id="produs2" style="display: none;">Încărcător Iphone 14<button onclick="downQty(2,75)">-</button>
+                               <span id="qty2">1</span>
+                               <button onclick="upQty(2,75)">+</button>
+                               <span style="display: none;" id="pretInitial2">75</span>
+                               <span id="total2">75</span> RON <button id="deleteRow" style="background-color: rgb(142, 218, 253);" onclick="deleteRow(2)"> X </button>
+                                </p>
+                            </div>
+        
+                            <div class="produs">
+                                <p id="produs3" style="display: none;">Airpods 13<button onclick="downQty(3,250)">-</button>
+                                <span id="qty3">1</span>
+                                <button onclick="upQty(3,250)">+</button>
+                                <span style="display: none;" id="pretInitial3">250</span>
+                                <span id="total3">250</span> RON <button id="deleteRow" style="background-color: rgb(142, 218, 253);" onclick="deleteRow(3)"> X </button>
+                                </p>
+                            </div>  
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <script src="functii.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
